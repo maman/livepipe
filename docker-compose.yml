@@ -1,0 +1,16 @@
+version: '3'
+services:
+  web:
+    build: .
+    container_name: livepipe-web
+    command: 'nodemon --inspect=0.0.0.0:5858 index.js'
+    working_dir: /app
+    volumes:
+      - '.:/app'
+    ports:
+      - '${PORT}:${PORT}'
+      - '${RTMP_PORT}:${RTMP_PORT}'
+    environment:
+      - 'NODE_ENV=${NODE_ENV}'
+      - 'RTMP_PORT=${RTMP_PORT}'
+      - 'PORT=${PORT}'

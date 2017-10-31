@@ -1,0 +1,36 @@
+{
+  "name": "livepipe",
+  "version": "1.0.0",
+  "description": "Piping videos to live endpoints",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "develop": "nodemon --inspect=0.0.0.0:5858 index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "lint-staged"
+  },
+  "keywords": ["live", "stream"],
+  "author": "Achmad Mahardi <achmad@mahardi.me>",
+  "license": "MIT",
+  "devDependencies": {
+    "flow-bin": "^0.57.3",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "prettier": "^1.7.4"
+  },
+  "dependencies": {
+    "bls": "^1.2.0",
+    "express": "^4.16.2",
+    "flow-remove-types": "^1.2.3",
+    "rx": "^4.1.0",
+    "superagent": "^3.8.0"
+  },
+  "lint-staged": {
+    "linters": {
+      "*.js": [
+        "./node_modules/.bin/prettier --write --bracket-spacing=false --single-quote=true --jsx-bracket-same-line=true --trailing-comma=es5 --print-width=80",
+        "git add"
+      ]
+    }
+  }
+}
