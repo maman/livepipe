@@ -1,6 +1,6 @@
 # LivePipe [pretty much WIP]
 
-Video content management which include a RTMP streaming server that re-stream to any RTMP streaming endpoint
+Video content management that include a RTMP streaming server that re-stream to any RTMP streaming endpoint
 
 ## Concept
 
